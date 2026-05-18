@@ -1,12 +1,16 @@
 import { Outlet } from "react-router-dom";
 
- 
-function Users(){
+function Users({ setDrafts }) {
 
-    return(
-      <section className="py-4">
- <Outlet/>
-      </section>
-    )
+  return (
+
+    <section className="py-4">
+
+      <Outlet context={{ setDrafts }} />
+
+    </section>
+
+  );
 }
+
 export default Users;
